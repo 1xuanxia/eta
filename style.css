@@ -90,9 +90,9 @@ header .burger{
 /* 背景位置 */
 
 /* 轮播标题默认不显示，在JS中用动画移入  */
-/* .slide-caption > * {
+.slide-caption > * {
     opacity: 0;
-} */
+}
 
 .slide-caption h1{
     font-size: 54px;
