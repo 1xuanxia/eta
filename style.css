@@ -169,6 +169,21 @@ section {
     color: var(--text-color-dark-gray)
 }
 
+/* 区域背景色，因为区域有最大宽度限制，用before来设置占满浏览器宽度 */
+.section-bg {
+    position: relative;
+  }
+  
+  .section-bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #f9fbfb;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+  }
+
 .about-us{
     padding-bottom: 32px;
 }
@@ -203,50 +218,240 @@ section {
     margin-top:5px ;
 }
 
-/* 社团简介 */
-.feature1{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:140px 140px;
-}
 
-.section-bg{
-    position: relative;
-}
-
-.section-bg::before{
-    content: "";
-    display: block;
-    position: absolute;
-    background-color: #f9fbfb;
-    width: 100vw;
-    height: 100%;
-    z-index: -1;
-}
-
-.filter-btns{
+.showcases {
+    max-width: unset;
+    padding: 0;
+    padding-top: 72px;
+  }
+  
+  /* 案例筛选按钮容器 */
+  .filter-btns {
     margin-top: 54px;
     margin-bottom: 38px;
-}
-
-.filter-btn{
-    margin:0 7px;
+  }
+  
+  /* 筛选按钮 */
+  .filter-btn {
+    margin: 0 7px;
     background-color: var(--secondary-color);
     border: 0;
     color: var(--text-color-dark-gray);
     padding: 8px 18px;
     border-radius: 4px;
-    cursor:pointer;
+    cursor: pointer;
     transition: 0.4s;
-}
-
-.filter-btn:focus,
-.filter-btn:active{
+  }
+  
+  /* 按钮选中时 */
+  .filter-btn:focus,
+  .filter-btn:active {
+    /* 去掉边框 */
     outline: none;
-}
-
-.filter-btn.active,
-.filter-btn:hover{
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
     background-color: var(--primary-color);
     color: white;
+  }
+  
+  .showcases .cases {
+    width: 100vw;
+  }
+  
+  .showcases .case-item {
+    /* 保持图片长宽比 */
+    width: 25vw;
+    /* 这里没有写错，图片比例为25：20，也就是5：4 */
+    height: 20vw;
+    overflow: hidden;
+  }
+  
+  /* 案例图片 */
+  .case-item img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* 团队介绍 */
+  .team-intro{
+    margin-top: 48px;
+    padding-top: 62px;
+    padding-bottom: 52px;
+  }
+
+  .team-members{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 24px;
+    margin-top:86px ;
+  }
+
+  .team-member{
+    background-color: white;
+    box-shadow: 0px 0px 24px rgba(0,0,0,0.2);
+    text-align: center;
+    padding-bottom: 28px;
+    transition: 0.4s;
+    display: grid;
+    justify-items: center;
+  }
+
+  .profile-image{
+    overflow:hidden;
+  }
+
+  .profile-image img{
+    width: 100%;
+    height:264px;
+    object-fit :cover;
+    object-position:top center ;
+  }
+
+  .team-member .name{
+    margin-top: 18px;
+    font-size:18px;
+    font-weight:500;
+    color:var(--text-color-dark);
+  }
+
+  .team-member .position{
+    color:var(--text-color-dark-gray);
+    margin-top: 12px;
+    margin-bottom: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .team-member:hover{
+    transform:translateY(-20px) scale(1.05);
+    box-shadow: 0px 0px 36px rgba(0,0,0,0.1);
+  }
+
+  /* 最新信息 */
+  .company-activities{
+    margin-top:88px;
+  }
+
+  .activities{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
+
+  .activity{
+    box-shadow:0px 0px 24px rgba(0,0,0,0.1);
+    padding: 24px;
+    transition: 0.4s;
+  }
+    .act-image-wrapper{
+    height: 255px;
+    overflow: hidden;
+    margin: -24px;
+    margin-bottom: 0;
+  }
+
+  .act-image-wrapper img{
+    min-height:300px;
+    object-fit: cover;
+  }
+
+  .activity .meta{
+    margin-top: 20px;
+    margin: 12px;
+    color: var(--text-color-light-gray);
+    font-size: 12px;
+    display: flex;
+  }
+
+  .act-title{
+    color: var(--text-color-dark);
+    font-size:18px;
+    margin-bottom: 16px;
+  }  
+
+  .activity article{
+    color:var(--text-color-gray);
+    letter-spacing:0.54px;
+    line-height: 24px;
+  }
+
+  .readmore-btn{
+    border:0;
+    color:white;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 6px 14px;
+    margin-top: 24px;
+  }
+  
+  .activity:hover {
+    transform:translate(-20px) scale(1.05);
+    box-shadow: 0px 0px 36px rgba(0, 0, 0, 0.1);
+  }
+/* 底部信息 */
+footer{
+    margin-top: 124px;
+    background-color: #181818;
+    display: grid;
+    justify-items: center;
+    padding-top: 72px;
+    padding-bottom: 24px;
+}
+
+.footer-menus{
+    width:100%;
+    max-width:1180px;
+    display: grid;
+    grid-template-columns: 2fr repeat(4,1fr);
+    padding: 0 80px;
+    position: relative;
+}
+
+.menu-title{
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.contact-us{
+    justify-self: start;
+    color:var(--text-color-lightest) ;
+}
+
+.contact-us p:not(:first-child){
+    padding-bottom: 16px;
+}
+
+.menu-items li{
+    list-style: none;
+    padding-bottom: 8px;
+}
+
+.menu-items li a{
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--text-color-lightest);
+}
+
+.right{
+    justify-self: center;
+    color: white;
+}
+
+.scrollToTop a{
+    width:32px;
+    height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
 }

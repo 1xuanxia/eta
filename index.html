@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="libs/glide/glide.theme.min.css"/>
     <link rel="stylesheet" href="style.css"/>
     
-    <title>Document</title>
+    <title>SMU嵌协</title>
 </head>
 <body>
     <!-- 顶部 -->
@@ -19,8 +19,8 @@
         <!-- 导航 -->
         <nav>
             <a href="" href+#="">协会简介</a>
-            <a href="" href+#="">社团活动</a>
-            <a href="" href+#="">团队介绍</a>
+            <a href="" href+#="">协会活动</a>
+            <a href="" href+#="">部门介绍</a>
             <a href="" href+#="">最新消息</a>
             <i class="fas fa-search"></i>
         </nav>
@@ -37,8 +37,7 @@
                 <div class="glide__slide">
                     <div class="slide-caption">
                         <h1>嵌协英才，成就未来!</h1>
-                        <h3>嵌协是一个颜值与实力并存的协会哦,在这里,你可以交到许多不仅好看
-                            而且实力也一流的小伙伴,机不可失,时不再来，
+                        <h3>嵌协是一个颜值与实力并存的协会哦,在这里,你可以结交到许多优秀小伙伴,机不可失,时不再来，
                             嵌入式技术协会欢迎你的加入!</h3>
                         <button class="explore-btn">了解更多</button>
                     </div>
@@ -89,7 +88,7 @@
                 </div>
                 <div class="feature">
                     <i class="fas fa-lightbulb"></i>
-                    <h4 class="feature-title">协会特色</h4>
+                    <h4 class="feature-title">协会宗旨</h4>
                     <p class="feature-content">
                         协会的特色活动包含对C语言、单片机、Linux等课程的授课，单片机焊接的练习，魔鬼训练营的开展，
                         以及各种比赛的筹划举办如c语言竞赛、智能互联大赛、软件开源设计大赛等一系列丰富多彩的社团活动。
@@ -97,46 +96,166 @@
                 </div>
             </div>
         </section>
+        <!-- 协会活动 -->
         <section class="showcases section-bg">
-            <h2 class="title1">社团活动</h2>
+            <h2 class="title1">协会活动</h2>
             <div class="filter-btns">
-                <button class="filter-btn active">全部</button>
-                <button class="filter-btn">课程培训</button>
-                <button class="filter-btn">比赛交流</button>
-                <button class="filter-btn">团建活动</button>
+                <button class="filter-btn active" data-filter="*">全部</button>
+                <button class="filter-btn" data-filter=".a">课程培训</button>
+                <button class="filter-btn" data-filter='.b'>比赛交流</button>
+                <button class="filter-btn" data-filter=".c">团建活动</button>
             </div>
-            <div class="feature1">
-                <div class="feature">
-                    <h4 class="feature-title">课程培训</h4>
-                    <p class="feature-content">
-                        培训授课内容主要包含对C语言、单片机、Linux等课程的授课，单片机焊接的练习，魔鬼训练营的开展
-                    </p>
-                    <img src="my/1.jpg" alt=""></img>
-    
+            <div class="cases">
+                <!-- case-item样式类，web science为类别类 -->
+                <div class="case-item a">
+                    <!-- 图片 -->
+                    <img src="my/2.jpg" alt=""/>
                 </div>
-                <div class="feature">
-                    <h4 class="feature-title">比赛交流</h4>
-                    <p class="feature-content">
-                        c语言竞赛、智能互联大赛、软件开源设计大赛、
-                    </p>
-                    <img src="my/1.jpg" alt=""></img>
+                <div class="case-item b">
+                    <!-- 图片 -->
+                    <img src="my/1.jpg" alt=""/>
                 </div>
-                <div class="feature">
-                    
-                    <h4 class="feature-title">团建活动</h4>
-                    <p class="feature-content">
-                        迎新大会、联谊活动
-                    </p>
-                    <img src="my/1.jpg" alt=""></img>
+                <div class="case-item c">
+                    <!-- 图片 -->
+                    <img src="my/3.jpg" alt=""/>
+                </div>
+                <div class="case-item a">
+                    <!-- 图片 -->
+                    <img src="my/1.jpg" alt=""/>
+                </div>
+                <div class="case-item a">
+                    <!-- 图片 -->
+                    <img src="my/3.jpg" alt=""/>
                 </div>
             </div>
         </section>
-        <!-- 社团活动 -->
+        <!-- 部门介绍 -->
+        <section class="team-intro section-bg">
+            <h2 class="title1">部门介绍</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="profile-image">
+                        <img src="my/1.jpg" alt="">
+                    </div>
+                    <h4 class="name">创新部</h4>
+                    <p class="position">嵌协是一个颜值与实力并存的协会哦,在这里,你可以结交到许多优秀小伙伴,机不可失,时不再来，
+                        嵌入式技术协会欢迎你的加入!</p>    
+                </div>
+                <div class="team-member">
+                    <div class="profile-image">
+                        <img src="my/1.jpg" alt="">
+                    </div>
+                    <h4 class="name">创新部</h4>
+                    <p class="position">简介</p>    
+                </div>
+                <div class="team-member">
+                    <div class="profile-image">
+                        <img src="my/1.jpg" alt="">
+                    </div>
+                    <h4 class="name">创新部</h4>
+                    <p class="position">简介</p>  
+                </div>
+                <div class="team-member">
+                    <div class="profile-image">
+                        <img src="my/1.jpg" alt="">
+                    </div>
+                    <h4 class="name">创新部</h4>
+                    <p class="position">简介</p>    
+                </div>
+                <div class="team-member">
+                    <div class="profile-image">
+                        <img src="my/1.jpg" alt="">
+                    </div>
+                    <h4 class="name">创新部</h4>
+                    <p class="position">简介</p>    
+                </div>
+            </div>
+        </section>
+        <!-- 最新消息 -->
+        <section class="company-activities">
+            <h2 class="title1">最新消息</h2>
+            <p class="intro">一键了解协会最新动态</p>
+            <div class="activities">
+                <div class="activity">
+                    <div class="act-image-wrapper">
+                        <img src="my/2.jpg" alt="">
+                    </div>
+                    <div class="meta">
+                        <p class="date-published">
+                            <i class="far fa-calendar"> 2022年8月10日</i>
+                        </p>
+                    </div>
+                    <h2 class="act-title">一篇文章</h2>
+                    <article>文章内容</article>
+                    <button class="readmore-btn">阅读更多</button>
+                </div>
+                <div class="activity">
+                    <div class="act-image-wrapper">
+                        <img src="my/3.jpg" alt="">
+                    </div>
+                    <div class="meta">
+                        <p class="date-published">
+                            <i class="far fa-calendar"> 2022年8月10日</i>
+                        </p>
+                    </div>
+                    <h2 class="act-title">一篇文章</h2>
+                    <article>文章内容</article>
+                    <button class="readmore-btn">阅读更多</button>
+                </div>
+            </div>
+        </section>
     </div>
-    <!-- 社团活动 -->
-
+    <footer>
+        <div class="footer-menus">
+            <div class="contact-us">
+                <p class="menu-title">联系我们</p>
+                <p>QQ群:</p>
+                <p>微信公众号:</p>
+                <P>b站公众号:</P>
+            </div>
+            <div class="service-menu footer-menu">
+                <p class="menu-title">协会简介</p>
+                <ul class="menu-items">
+                    <li><a href="#">SMU嵌协</a></li>
+                    <li><a href="#">协会宗旨</a></li>
+                </ul>
+            </div>
+            <div class="service-menu footer-menu">
+                <p class="menu-title">协会活动</p>
+                <ul class="menu-items">
+                    <li><a href="#">全部</a></li>
+                    <li><a href="#">课程培训</a></li>
+                    <li><a href="#">比赛交流</a></li>
+                    <li><a href="#">团建活动</a></li>
+                </ul>
+            </div>
+            <div class="service-menu footer-menu">
+                <p class="menu-title">部门介绍</p>
+                <ul class="menu-items">
+                    <li><a href="#">创新部</a></li>
+                    <li><a href="#">研发部</a></li>
+                    <li><a href="#">办公室</a></li>
+                    <li><a href="#">外联部</a></li>
+                    <li><a href="#">信息部</a></li>
+                </ul>
+            </div>
+            <div class="service-menu footer-menu">
+                <p class="menu-title">最新消息</p>
+                <ul class="menu-items">
+                    <li><a href="#">文章1</a></li>
+                    <li><a href="#">文章2</a></li>
+                </ul>
+            </div>
+            <p class="rights">版权</p>
+            <div class="scrollToTop">
+                <a href="#"><i class="fas fa-chevron-up"></i></a>
+            </div>
+        </div>
+    </footer>
+ 
     <script src="libs/anime/anime.min.js"></script>
     <script src="libs/glide/glide.min.js"></script>
+    <script src="libs/isotope/isotope.pkgd.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
