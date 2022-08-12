@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="libs/scrollReveal/scrollreveal.min.js"></script>
     <link rel="stylesheet" 
         href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" />
     <link rel="stylesheet" href="libs/glide/glide.core.min.css"/>
     <link rel="stylesheet" href="libs/glide/glide.theme.min.css"/>
     <link rel="stylesheet" href="style.css"/>
     
-    <title>SMU嵌协</title>
+    <title>SMU嵌协迎新网站</title>
 </head>
 <body>
     <!-- 顶部 -->
-    <header>
+    <header >
         <div class="logo">SMU嵌协</div>
         <!-- 导航 -->
         <nav>
-            <a href="" href+#="">协会简介</a>
-            <a href="" href+#="">协会活动</a>
-            <a href="" href+#="">部门介绍</a>
-            <a href="" href+#="">最新消息</a>
+            <a href="#about-us">协会简介</a>
+            <a href="#showcases">协会活动</a>
+            <a href="#service">特色简介</a>
+            <a href="#team-intro">部门介绍</a>
+            <a href="#company-activities">最新消息</a>
             <i class="fas fa-search"></i>
         </nav>
         <div class="burger">
@@ -39,7 +41,7 @@
                         <h1>嵌协英才，成就未来!</h1>
                         <h3>嵌协是一个颜值与实力并存的协会哦,在这里,你可以结交到许多优秀小伙伴,机不可失,时不再来，
                             嵌入式技术协会欢迎你的加入!</h3>
-                        <button class="explore-btn">了解更多</button>
+                            <button class="explore-btn">了解更多</button>
                     </div>
                     <div class="backdrop"></div>
                     <img src="my/2.jpg" alt="" />
@@ -73,31 +75,40 @@
     </div>
     <!-- 协会简介 -->
     <div class="content-wrapper">
-        <section class="about-us">
+        <section id="about-us" class="about-us">
             <h2 class="title1">协会简介</h2>
-            <p class="intro">这是一个可以实践创新、软件研发、协会运营、培训参赛、结交好友的协会。   
+            <p class="intro">这是一个可以实践创新、软件研发、运营协会、培训参赛、结交好友的协会。   
             </p>
             <div class="features">
                 <div class="feature">
                     <i class="fas fa-star"></i>
                     <h4 class="feature-title">SMU嵌协</h4>
                     <p class="feature-content">
-                    西南民族大学嵌入式技术协会是由电气工程学院申请成立的技术实践型学生组织，连续多年荣获“十佳社团”称号。
-                    协会以嵌入式硬件与软件、操作系统与网络技术为课题，积极组织培训、竞赛与活动，提高学生动手和创新能力。
+                    西南民族大学嵌入式技术协会是由电气工程学院申请成立的技术实践型学生组织，
+                    由院团委直接领导，协会连续多年荣获“十佳社团”称号。
                     </p>
                 </div>
                 <div class="feature">
                     <i class="fas fa-lightbulb"></i>
                     <h4 class="feature-title">协会宗旨</h4>
                     <p class="feature-content">
-                        协会的特色活动包含对C语言、单片机、Linux等课程的授课，单片机焊接的练习，魔鬼训练营的开展，
-                        以及各种比赛的筹划举办如c语言竞赛、智能互联大赛、软件开源设计大赛等一系列丰富多彩的社团活动。
+                        嵌协英才，成就未来!
+                        为提高同学们的专业技术水平，协会以嵌入式硬件与软件、操作系统与网络技术为课题，
+                        通过开展课余培训、组织竞赛等形式，提高学生动手能力和创新能力。
+                    </p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-exclamation"></i>
+                    <h4 class="feature-title">协会特色</h4>
+                    <p class="feature-content">
+                        协会特色活动包括C语言、单片机、Linux等课程的授课，单片机焊接的练习，魔鬼训练营的开展，
+                        以及各类比赛的筹划举办如c语言竞赛、嵌入式芯片与系统设计大赛、中国大学生物流技术(起重机)创意大赛等。
                     </p>
                 </div>
             </div>
         </section>
         <!-- 协会活动 -->
-        <section class="showcases section-bg">
+        <section id="showcases"  class="showcases section-bg">
             <h2 class="title1">协会活动</h2>
             <div class="filter-btns">
                 <button class="filter-btn active" data-filter="*">全部</button>
@@ -129,8 +140,60 @@
                 </div>
             </div>
         </section>
+        <!-- 特色简介 -->
+        <section id="service" class="service">
+            <h2 class="title1">特色简介</h2>
+            <p class="intro">
+                想打比赛但又担心能力不行?莫慌，我们有培训和校内赛!
+            </p>
+            <div class="services">
+              <div class="service-item">
+                <i class="fas fa-comments"></i>
+                <h2 class="service-title">培训(一) C语言程序设计</h2>
+                <p class="service-content">
+                讲述C语言编程基础课程，内容包括模块化设计，数据类型，运算符和表达式，三大结构，函数，数组，结构体，指针和文件。
+                </p>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-gavel"></i>
+                <h2 class="service-title">培训(二) 51单片机</h2>
+                <p class="service-content">
+                讲述硬件知识的了解，信号调理及运用，电视遥控解码及运用，传感器的了解及运用，系统组成及工作原理等。
+                此外，还有单片机焊接的实际操作练习，单片机焊接是参加嵌入式各大比赛必备的基础技能之一。
+                </p>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-file-signature"></i>
+                <h2 class="service-title">培训(三) Linux系统</h2>
+                <p class="service-content">
+                讲述Linux常见的系统版本，使用LNMP架构部署动态网站环境，虚拟机安装及使用，基本命令教授与练习，vim的编译器与shell命令脚本，用户身份与文件权限，个性化界面设置。
+                </p>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-user"></i>
+                <h2 class="service-title">比赛(一) C语言竞赛 </h2>
+                <p class="service-content"> 
+                  为帮助大一新生更好的适应大学生活，激发同学们自主学习的动力，协会每年都会举办C语言竞赛活动来丰富同学们的知识，提升同学们的编程能力。
+                </p>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h2 class="service-title">比赛(二) 魔鬼训练营</h2>
+                <p class="service-content">
+                  魔鬼训练营旨在帮助同学们提高电子信息专业认知，进一步提高实践动手能力。训练营为限时淘汰制，后期有软硬件分流训练，常在寒假举办。
+                </p>
+              </div>
+              <div class="service-item">
+                <i class="fas fa-user-check"></i>
+                <h2 class="service-title">比赛(三)Linux设计大赛</h2>
+                <p class="service-content">
+                  如果想研究嵌入式高级芯片，那么学习Linux系统必不可少。为巩固新生们的培训结果，协会将举行Linux设计大赛来考察自主学习情况，激发同学们的学习兴趣。
+                </p>
+              </div>
+            </div>
+          </section>
         <!-- 部门介绍 -->
-        <section class="team-intro section-bg">
+        <section id="team-intro" class="team-intro section-bg">
             <h2 class="title1">部门介绍</h2>
             <div class="team-members">
                 <div class="team-member">
@@ -138,41 +201,46 @@
                         <img src="my/1.jpg" alt="">
                     </div>
                     <h4 class="name">创新部</h4>
-                    <p class="position">嵌协是一个颜值与实力并存的协会哦,在这里,你可以结交到许多优秀小伙伴,机不可失,时不再来，
-                        嵌入式技术协会欢迎你的加入!</p>    
+                    <p class="position">创新部负责硬件技术方面的研究和授课，为协会成员进行硬件以及电子技术的实践指导。
+                        同时负责协会的硬件教学任务包括51单片机、32单片机、电路原理图和PCB绘制等，在各种创新项目的电控部分中起到重要作用。</p>    
                 </div>
                 <div class="team-member">
                     <div class="profile-image">
                         <img src="my/1.jpg" alt="">
                     </div>
-                    <h4 class="name">创新部</h4>
-                    <p class="position">简介</p>    
+                    <h4 class="name">研发部</h4>
+                    <p class="position">研发部负责软件方面的技术攻坚、应用与培训。学习、研究当前主流的以及前沿的计算机技术，同时培训协会成员的软件技能，
+                        实训内容包括C语言、Linux、Python、机器视觉、web开发等。</p>    
                 </div>
                 <div class="team-member">
                     <div class="profile-image">
                         <img src="my/1.jpg" alt="">
                     </div>
-                    <h4 class="name">创新部</h4>
-                    <p class="position">简介</p>  
+                    <h4 class="name">办公室</h4>
+                    <p class="position">办公室统筹分配各部门工作，负责协会的日常事务的管理包括账目统计和各项活动的策划及组织，同时负责培训协会成员Word、
+                        Excel等办公软件的使用以及活动策划的方案和技巧。
+                    </p>  
                 </div>
                 <div class="team-member">
                     <div class="profile-image">
                         <img src="my/1.jpg" alt="">
                     </div>
-                    <h4 class="name">创新部</h4>
-                    <p class="position">简介</p>    
+                    <h4 class="name">外联部</h4>
+                    <p class="position">外联部负责协会活动过程跟踪，进行文字或照片等活动现场的记录，同时管理协会的新媒体账号的运营，
+                        负责协会各项活动的宣传工作，通过各种形式宣传协会精神和各项活动。负责培训协会成员PS、视频剪辑等技能。</p>    
                 </div>
                 <div class="team-member">
                     <div class="profile-image">
                         <img src="my/1.jpg" alt="">
                     </div>
-                    <h4 class="name">创新部</h4>
-                    <p class="position">简介</p>    
+                    <h4 class="name">信息部</h4>
+                    <p class="position">信息部负责收集、分类、整理协会的各项比赛、活动的资料，推进协会信息化工作，及时更新协会的最新信息。
+                        同时负责申请活动场地、对参加活动的人员进行签到监督。负责培训会员Word、Excel技能等办公软件的使用</p>    
                 </div>
             </div>
         </section>
         <!-- 最新消息 -->
-        <section class="company-activities">
+        <section id="company-activities" class="company-activities">
             <h2 class="title1">最新消息</h2>
             <p class="intro">一键了解协会最新动态</p>
             <div class="activities">
@@ -182,12 +250,13 @@
                     </div>
                     <div class="meta">
                         <p class="date-published">
-                            <i class="far fa-calendar"> 2022年8月10日</i>
+                            <i class="far fa-calendar"> 2022年5月29日</i>
                         </p>
                     </div>
-                    <h2 class="act-title">一篇文章</h2>
-                    <article>文章内容</article>
-                    <button class="readmore-btn">阅读更多</button>
+                    <h2 class="act-title">第七届物流技术(起重机)创意大赛校内赛通知</h2>
+                    <article>如果你想尝试更加高难度的比赛锻炼自我，那么协会承办的这些大比赛不容错过，
+                        快来微信公众号看看有没有适合你的比赛吧。</article>
+                    <button onclick="window.location.href='https://mp.weixin.qq.com/s/ZUTjHePwl1wF82xGvIeyew'" class="readmore-btn">阅读更多</button>
                 </div>
                 <div class="activity">
                     <div class="act-image-wrapper">
@@ -195,16 +264,17 @@
                     </div>
                     <div class="meta">
                         <p class="date-published">
-                            <i class="far fa-calendar"> 2022年8月10日</i>
+                            <i class="far fa-calendar"> 2021年10月26日</i>
                         </p>
                     </div>
-                    <h2 class="act-title">一篇文章</h2>
-                    <article>文章内容</article>
-                    <button class="readmore-btn">阅读更多</button>
+                    <h2 class="act-title">协会大介绍</h2>
+                    <article>如果你还想更加深入了解我们协会团队，快来看看这篇推文吧!</article>
+                    <button onclick="window.location.href='https://mp.weixin.qq.com/s/PuKpd3w9DBIMtsDP1Ign7w'" class="readmore-btn">阅读更多</button>
                 </div>
             </div>
         </section>
     </div>
+    <!-- 底部信息 -->
     <footer>
         <div class="footer-menus">
             <div class="contact-us">
@@ -218,6 +288,7 @@
                 <ul class="menu-items">
                     <li><a href="#">SMU嵌协</a></li>
                     <li><a href="#">协会宗旨</a></li>
+                    <li><a href="#">协会特色</a></li>
                 </ul>
             </div>
             <div class="service-menu footer-menu">
@@ -227,6 +298,13 @@
                     <li><a href="#">课程培训</a></li>
                     <li><a href="#">比赛交流</a></li>
                     <li><a href="#">团建活动</a></li>
+                </ul>
+            </div>
+            <div class="service-menu footer-menu">
+                <p class="menu-title">特色简介</p>
+                <ul class="menu-items">
+                    <li><a href="#">培训</a></li>
+                    <li><a href="#">比赛</a></li>
                 </ul>
             </div>
             <div class="service-menu footer-menu">
@@ -242,11 +320,11 @@
             <div class="service-menu footer-menu">
                 <p class="menu-title">最新消息</p>
                 <ul class="menu-items">
-                    <li><a href="#">文章1</a></li>
-                    <li><a href="#">文章2</a></li>
+                    <li><a href="#">比赛通知</a></li>
+                    <li><a href="#">协会大介绍</a></li>
                 </ul>
             </div>
-            <p class="rights">版权</p>
+            <p class="rights">©2022 SMU嵌协</p>
             <div class="scrollToTop">
                 <a href="#"><i class="fas fa-chevron-up"></i></a>
             </div>
@@ -256,6 +334,7 @@
     <script src="libs/anime/anime.min.js"></script>
     <script src="libs/glide/glide.min.js"></script>
     <script src="libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

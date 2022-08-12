@@ -58,6 +58,28 @@ header nav i{
 header .burger{
     display: none;
 }
+
+header.sticky{
+  position: fixed;
+  background-color: white;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+  animation: dropDown 0.5s ease-in-out forwards; 
+}
+
+header.sticky .logo,
+header.sticky nav a,
+header.sticky nav i {
+  color: var(--text-color-darker);
+}
+
+@keyframes dropDown{
+  from{
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 /* 导航样式 */
 .glide{
     position: relative;
@@ -191,7 +213,7 @@ section {
 .features{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows:140px 140px;
+    grid-template-rows:140px 140px 140px;
 }
 .feature{
     display: grid;
@@ -199,7 +221,7 @@ section {
         "icon title"
         "icon content";
     grid-template-columns: 60px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .feature i.fas{
     grid-area:icon;
@@ -214,6 +236,7 @@ section {
 
 .feature-content{
     grid-area:content;
+    font-size:16px;
     color:var(--text-color-gray);
     margin-top:5px ;
 }
@@ -274,6 +297,57 @@ section {
     object-fit: cover;
   }
   
+  /* 特色介绍 */
+  .service {
+    padding-top: 131px;
+  }
+  /* 所有服务 */
+  .services {
+    display: grid;
+    /* 同关于我们 */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    column-gap: 38px;
+    row-gap: 34px;
+  }
+  
+  /* 服务 */
+  .service-item {
+    /* 同关于我们 */
+    display: grid;
+    grid-template-areas:
+      "icon title"
+      "icon content";
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 1fr 3fr;
+    /* 内边距 */
+    padding: 24px;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* 服务图标 */
+  .service-item i.fas {
+    grid-area: icon;
+    font-size: 42px;
+    color: var(--primary-color);
+    padding-top: 6px;
+  }
+  /* 服务标题 */
+  .service-item .service-title {
+    grid-area: title;
+    color: var(--text-color-darker);
+    font-size: 24px;
+  }
+  /* 服务内容 */
+  .service-item .service-content {
+    grid-area: content;
+    color: var(--text-color-gray);
+    line-height: 30px;
+    font-size: 16px;
+    /* align-self: st; */
+    margin-top: 8px;
+  }
+  
   /* 团队介绍 */
   .team-intro{
     margin-top: 48px;
@@ -283,7 +357,7 @@ section {
 
   .team-members{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
     column-gap: 24px;
     margin-top:86px ;
   }
@@ -340,12 +414,13 @@ section {
     column-gap: 24px;
   }
 
+
   .activity{
     box-shadow:0px 0px 24px rgba(0,0,0,0.1);
     padding: 24px;
     transition: 0.4s;
   }
-    .act-image-wrapper{
+  .act-image-wrapper{
     height: 255px;
     overflow: hidden;
     margin: -24px;
@@ -384,6 +459,7 @@ section {
     border-radius: 4px;
     padding: 6px 14px;
     margin-top: 24px;
+    cursor:pointer;
   }
   
   .activity:hover {
@@ -436,11 +512,19 @@ footer{
     color: var(--text-color-lightest);
 }
 
-.right{
+.rights{
+    margin-top: 24px;
+    margin-bottom: 16px;
+    grid-column: 1;
     justify-self: center;
     color: white;
 }
 
+.scrollToTop{
+  display: none;
+  position: relative;
+  z-index: 300;
+}
 .scrollToTop a{
     width:32px;
     height: 32px;
@@ -454,4 +538,222 @@ footer{
     position: fixed;
     bottom: 60px;
     right: 30px;
+}
+/* 响应式屏幕 */
+@media (max-width: 1100px){
+  header nav{
+    display:none;
+  }
+  header{
+    grid-template-columns: repeat(2,1fr);
+  }
+  header .burger{
+    display: block;
+    width: 20px;
+    height: 6px;
+    position: relative;
+    justify-self:end ;
+    cursor:pointer;
+  }
+
+  .burger-line1,
+  .burger-line2,
+  .burger-line3{
+    width:20px;
+    height:3px;
+    background-color: var(--text-color-lightest);
+  }
+  .burger-line1{
+    position: absolute;
+    top: -6px;
+  }
+  .burger-line3{
+    position: absolute;
+    top: 6px;
+  }
+
+header.open nav{
+  display: grid;
+  position:absolute;
+  left:0;
+  top: 0;
+  width:100vw;
+  height: 100vh;
+  background-color: white;
+  grid-auto-rows: max-content;
+  justify-items: end;
+  padding: 0 40px;
+  opacity: 0;
+  animation: slideDown 0.6s ease-out forwards;
+}
+
+header.open nav > * {
+  color: var(--text-color-darker);
+  animation: showMenu 0.5s linear forwards 0.4s;
+  font-size: 18px;
+  margin: 4px 0;
+  opacity: 0;
+}
+
+header.open nav > i.fas{
+  margin-top:10px ;
+}
+
+header.open .burger-line1,
+header.open .burger-line2,
+header.open .burger-line3,
+header.sticky .burger-line1,
+header.sticky .burger-line2,
+header.sticky .burger-line3{
+  background-color: var(--text-color-darker);
+  transition: 0.4s ease;
+}
+
+header.open .burger-line1{
+  transform: rotate(45deg) translate(3px,5px);
+}
+
+header.open .burger-line2{
+  transform: translateX(5px);
+  opacity: 0;
+}
+
+header.open .burger-line3{
+  transform: rotate(-45deg) translate(3px,-5px);
+}
+
+header.open .logo{
+  z-index: 40;
+  color:var(--text-color-darker);
+}
+
+@keyframes slideDown {
+  from{
+    height: 0;
+    opacity: 0;
+  }
+  to{
+    height: 100vh;
+    padding-top: 80px;
+    opacity: 1;
+  }
+}
+@keyframes showMenu {
+  from{
+    opacity: 0;
+    transform: translateY(-1vh);
+  } 
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+.service-item .service-tittle{
+  font-size:20px;
+}
+
+.service-item .service-content{
+  font-size:14px;
+  line-height: 24px;
+}
+
+.team-members{
+  grid-template-columns: 1fr 1fr;
+  row-gap: 36px;
+  column-gap: 6vw;
+}
+
+.activities{
+  grid-template-columns: 1fr 1fr;
+  row-gap: 36px;
+}
+}
+
+@media (max-width:992px) {
+  .slide-caption h1{
+    font-size: 48px;
+  }
+  .slide-caption h3{
+    font-size: 18px;
+  }
+  .services{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+  }
+  .showcases .case-item{
+    width:calc(100vw/3);
+
+  }
+}
+
+@media (max-width:768px) {
+  section,
+  .footer-menus{
+    padding: 0 40px;
+  }
+  .footer-menus{
+    grid-template-columns: 2fr repeat(2,1fr);
+    row-gap:24px;
+  }
+  .contact-us{
+    grid-row:1/3;
+  }
+  .footer-menu{
+    text-align: right;
+  }
+  .activities{
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+  .team-members{
+    grid-template-columns: minmax(200px,400px);
+  }
+  .features,
+  .services{
+    grid-template-columns: 1fr;
+  }
+  .showcases .case-item {
+    width: calc(100vw/2);
+    height: 30vw;
+  }
+}
+
+/* 小于576象素 */
+@media (max-width: 576px) {
+  /* 缩小轮播标题文字，探索更多按钮文字 */
+  .slide-caption h1 {
+    font-size: 28px;
+  }
+
+  .slide-caption h3 {
+    font-size: 14px;
+  }
+
+  .explore-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* 协会活动显示为1列 */
+  .showcases .case-item {
+    width: 100vw;
+    height: 60vw;
+  }
+
+  .service-item .service-title {
+    font-size: 18px;
+}
+
+  /* 底部菜单显示为1列 */
+  .footer-menus {
+    grid-template-columns: 1fr;
+    /* row-gap: 24px; */
+  }
+
+  /* 底部菜单左对齐 */
+  .footer-menu {
+    justify-self: start;
+    text-align: left;
+  }
 }
