@@ -730,6 +730,10 @@ header.open .logo{
     font-size: 14px;
   }
 
+  .feature-content{
+    font-size: 14px;
+  }
+
   .explore-btn {
     padding: 8px 18px;
     font-size: 14px;
