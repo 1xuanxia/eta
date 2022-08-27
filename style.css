@@ -295,6 +295,8 @@ section {
   .case-item img {
     height: 100%;
     object-fit: cover;
+    padding-top:5%;
+    padding-right:5%;
   }
   
   /* 特色介绍 */
